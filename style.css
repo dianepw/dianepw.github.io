@@ -107,6 +107,11 @@ textarea {
     resize: none;
 }
 
+.req:after {
+content:" *";
+color: red;
+}
+
 a.button {
 /*     background-color: #333; */
     background-color: #820000;
