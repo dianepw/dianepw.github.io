@@ -76,15 +76,14 @@
 
     <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwpxJ1LaAsYzkfUvlIypNFnHPtRzwvTNYIm33h4ilE1QDqtNsmv44UFqoHZJk_XAnwr/exec">
         <fieldset>
-<!--             <legend>Contact Form</legend> -->
             <p>
-                <label for="name">Contact Name</label><br>
+                <label class="req" for="name">Contact Name</label><br>
                 <input type="text" id="name" name="name" required><br>
             </p><p>
-                <label for="email">Contact Email</label><br>
+                <label class="req" for="email">Contact Email</label><br>
                 <input type="text" id="email" name="email" required><br>
             </p><p>
-                <label for="relationship">Relationship to Client</label><br>
+                <label class="req" for="relationship">Relationship to Client</label><br>
                 <input type="radio" id="self" name="relationship" value="Self" required>
                 <label for="self">Self</label><br>
                 <input type="radio" id="spouse" name="relationship" value="Spouse" required>
@@ -94,7 +93,7 @@
                 <input type="radio" id="other" name="relationship" value="Other" required>
                 <label for="other">Other</label><br>
             </p><p>
-                <label for="concerns">Current Concerns (briefly note why you are seeking services)</label><br>
+                <label class="req" for="concerns">Current Concerns (briefly note why you are seeking services)</label><br>
                 <textarea rows="4" cols="60" name="concerns" placeholder="Enter text" required></textarea><br>
             </p>
                 <input type="submit" value="Submit">
