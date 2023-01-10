@@ -79,23 +79,23 @@
 <!--             <legend>Contact Form</legend> -->
             <p>
                 <label for="name">Contact Name</label><br>
-                <input type="text" id="name" name="name"><br>
+                <input type="text" id="name" name="name" required><br>
             </p><p>
                 <label for="email">Contact Email</label><br>
-                <input type="text" id="email" name="email"><br>
+                <input type="text" id="email" name="email" required><br>
             </p><p>
                 <label for="relationship">Relationship to Client</label><br>
-                <input type="radio" id="self" name="relationship" value="Self">
+                <input type="radio" id="self" name="relationship" value="Self" required>
                 <label for="self">Self</label><br>
-                <input type="radio" id="spouse" name="relationship" value="Spouse">
+                <input type="radio" id="spouse" name="relationship" value="Spouse" required>
                 <label for="spouse">Spouse</label><br>
-                <input type="radio" id="parent" name="relationship" value="Parent">
-                <label for="Parent">Parent</label><br>
-                <input type="radio" name="relationship" id="otherRad" value="Other">
-                <input id="other" type="text" placeholder="Other"><br>
+                <input type="radio" id="parent" name="relationship" value="Parent" required>
+                <label for="parent">Parent</label><br>
+                <input type="radio" id="other" name="relationship" value="Other" required>
+                <label for="other">Other</label><br>
             </p><p>
                 <label for="concerns">Current Concerns (briefly note why you are seeking services)</label><br>
-                <textarea rows="4" cols="60" name="concerns" placeholder="Enter text"></textarea><br>
+                <textarea rows="4" cols="60" name="concerns" placeholder="Enter text" required></textarea><br>
             </p>
                 <input type="submit" value="Submit">
         </fieldset>
