@@ -107,16 +107,6 @@ textarea {
     resize: none;
 }
 
-#other {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-#otherRad:checked ~ #other {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 a.button {
 /*     background-color: #333; */
     background-color: #820000;
