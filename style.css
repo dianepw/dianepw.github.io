@@ -5,13 +5,12 @@
 
 * {
     font-size: 16px;
-/*     font-family: Helvetica, sans-serif;; */
 }
 html {
     font-family: Helvetica, sans-serif;;
     max-width: 900px;  /* For Desktop PC (see @media for Tablets/Phones) */
-/*     padding-left: 2%; */
-/*     padding-right: 3%; */
+    padding-left: 2%;
+    padding-right: 2%;
     margin: 0 auto ;
     background: #F5F5F0;
 } 
@@ -105,6 +104,7 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     resize: none;
+    width: 75%;
 }
 
 .req:after {
@@ -120,7 +120,7 @@ a.button {
     padding: 14px 16px;
     text-decoration: none;
     display: block;
-    width: 10vw;
+    width: 20%;
     margin-left: auto;
     margin-right: auto
 }
@@ -130,21 +130,20 @@ a.button:hover {
     background-color: #630606;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     * {font-size: 12px;}
-    ul.topnav li.right, 
-    ul.topnav li {float: none;}
-}
+
+} */
 
 ul.topnav {
-  width: 100vw;
-  position: relative;
-  left: calc(-50vw + 50%);
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
 }
 
 ul.topnav li {float: left;}
@@ -153,23 +152,20 @@ ul.topnav li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1em;
   text-decoration: none;
 }
 
 ul.topnav li a:hover {background-color: #111;}
 
-ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
 iframe {
     display: block;
-    border-style:none;
+    border-style: none;
     margin: 0 auto;
     width: 100%;
 }
+
+@media (max-width: 500px) { /* For small screen decices */
+    * {font-size: 12px;}
+    ul.topnav li.right, ul.topnav li {float: none;}
+}   
