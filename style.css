@@ -27,7 +27,7 @@ img {
 }
 
 img.left {
-    height: 40vh;
+    width: 38%;
     float: left; 
     padding-right: 2%
 }
