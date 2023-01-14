@@ -17,7 +17,7 @@ html {
 
 body {
     margin: 0;
-    background: lightsteelblue;
+    background: #b2cbd1;
 }
 
 div.content {
@@ -109,20 +109,18 @@ color: #9E3B1C;
 .header a:hover {background-color: #e6e6e6;}
 
 .header a.button {
-    background-color: lightsteelblue;
+    background-color: #b2ced1;
 }
-.header a.button:hover {background-color: #9badc4;}
+.header a.button:hover {background-color: #9cb5b8;}
 
 @media (max-width: 500px) { /* For small screen decices */
     * {font-size: 12px;}
     
-    .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
+    .header {
+         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;  
+    }
   }
 }   
