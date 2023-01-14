@@ -111,18 +111,17 @@ color: #9E3B1C;
 .header a.button {
     background-color: #b2cbd1;
 }
+
 .header a.button:hover {background-color: #9cb2b8;}
 
 @media (max-width: 500px) { /* For small screen decices */
     * {font-size: 12px;}
     
-    .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
+    .header {
+         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;  
+    }
   }
 }   
