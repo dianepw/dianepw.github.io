@@ -8,6 +8,11 @@
     src: url(IBMPlexSerif-SemiBold.woff2)
 }
 
+@font-face {
+    font-family: bold-font;
+    src: url(IBMPlexSans-SemiBold.woff2)
+}
+
 * {
     font-size: 15px;
 }
@@ -29,8 +34,13 @@ div.content {
 }
 
 a {
-  color: black;
-  font-weight: bold;
+    color: black;
+    font-family: bold-font;
+}
+
+h3 {
+    font-family: bold-font;
+    font-weight: normal;
 }
 
 img {
