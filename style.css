@@ -1,21 +1,32 @@
 @font-face {
-    font-family: Helvetica, sans-serif;;
+    font-family: body-font;
+    src: url(IBMPlexSans-Text.woff2)
+}
 
+@font-face {
+    font-family: heading-font;
+    src: url(IBMPlexSerif-SemiBold.woff2)
 }
 
 * {
-    font-size: 16px;
+    font-size: 15px;
 }
 html {
-    font-family: Helvetica, sans-serif;;
-    max-width: 900px;  /* For Desktop PC (see @media for Tablets/Phones) */
-    padding-left: 2%;
-    padding-right: 2%;
-    margin: 0 auto ;
-    background: #F5F5F0;
+    font-family: body-font, sans-serif;
 } 
 
-body {margin: 0}
+body {
+    margin: 0;
+    background: #b5d5e6;
+}
+
+div.content {
+    max-width: 900px;  /* For Desktop PC (see @media for Tablets/Phones) */
+    padding: 2%;
+    margin: 10px auto ;
+    background: white;
+    border-radius: 8px;
+}
 
 a {
   color: black;
@@ -24,44 +35,20 @@ a {
 
 img {
     border: none;
-}
-
-img.left {
-    width: 38%;
+    width: 35%;
     float: left; 
     padding-right: 2%
 }
 
 p {
   margin-top: 0px;
-  text-align: justify;
+  text-align: left;
 }
-sup {
-  vertical-align: 0.3em;
-  font-size: 0.65em;
-}   
-
-pre {
-  font-family: fabfont;
-  background-color: white; 
-  border: 1px solid Black; 
-  padding-left: 2%;
-  padding-top: 1ch;
-  padding-bottom: 1ch;
-  /* Only take care of X overflow since this is the only part that can be too wide.
-     The Y axis will never overflow.
-  */
-  overflow: hidden;
-}
-
-/* No bullets? */
-/* ul {list-style-type: none} */
 
 div.heading {
-    font-size: 120%;
-    color: #630606;
-    font-weight: bold;      
-    text-transform: uppercase;
+    font-family: heading-font;
+    font-size: 1.2em;
+    color: #9E3B1C;
     margin-top: 4ch;
 }
 
@@ -69,103 +56,81 @@ div.heading {
   text-decoration: none;
 }
 
- blockquote { 
-    background-color: #f3f3f3;
-    border: dashed 1px grey; 
-    width: 97.5%; 
-    font-style: italic; 
-    text-align: justify;
+fieldset {
+    border: 2px groove lightgray;
+    border-radius: 4px;
+    background: #f2f2f2;
+}
 
-    padding: 1ch; 
-    padding-top: 2ch; 
-    padding-bottom: 2ch;     
-    
-    margin : 0ch; 
-    margin-bottom: 2ch; 
-    margin-top: 0ch;
-  }
-
-  blockquote div {
-    text-transform: none;
-    text-align: right;
-    width: 100%;
-  }
-
-  code {
-    /*font-size: 110%;*/
-    font-weight: bold;
-    background-color: #e1e1e1;
-    border-radius: 0.5ch;
-    padding-left: 0.3ch;
-    padding-right: 0.3ch;
-  }
+textarea, input, button, select { font-family: inherit; font-size: inherit; }
 
 textarea {
-    font-family: inherit;
-    font-size: inherit;
     resize: none;
     width: 75%;
 }
 
 .req:after {
 content:" *";
-color: red;
+color: #9E3B1C;
 }
 
-a.button {
-/*     background-color: #333; */
-    background-color: #820000;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto
-}
-
-a.button:hover {
-/*     background-color: #111; */
-    background-color: #630606;
-}
-
-/* @media screen and (max-width: 500px) {
-    * {font-size: 12px;}
-
-} */
-
-ul.topnav {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
-    list-style-type: none;
+.header {
     overflow: hidden;
-    background-color: #333;
+    background-color: white;
+    padding: 5px 15px;
 }
 
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 1em;
-  text-decoration: none;
+.header a {
+    font-family: heading-font;
+    font-size: 1.2em;
+    float: left;
+    color: #9E3B1C;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
 }
 
-ul.topnav li a:hover {background-color: #111;}
-
-iframe {
-    display: block;
-    border-style: none;
-    margin: 0 auto;
-    width: 100%;
+.header h3 {
+    margin: 0;
+    font-family: heading-font;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    
 }
+
+.header a:hover {background-color: #e6e6e6;}
+
+.header-right {float: right}
+.header-right a {color: black; font-size: 1em;}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-center a {color: black; font-size: 1em;}
+
+.header a.button {
+    color: white;
+    background-color: #b84421;
+}
+.header a.button:hover {background-color: #9e3a1c;}
 
 @media (max-width: 500px) { /* For small screen decices */
     * {font-size: 12px;}
-    ul.topnav li.right, ul.topnav li {float: none;}
+    
+    .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
 }   
