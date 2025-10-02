@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Diane Pačes-Wiles, LCSW</title>
+    <link rel="icon" type="image/x-icon" href="logoicon.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <nav class="navbar top">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="approach.html" class="nav-item">Approach</a></li>
+                <li><a href="services.html" class="nav-item">Services</a></li>
+                <li><a href="faqs.html" class="nav-item">FAQs</a></li>
+                <li><a href="getstarted.html" class="nav-item">Get Started</a></li>
+            </ul>
+            <a href="index.html"><img class="logo" src="logo.png" alt="Company Logo"></a>
+            <a href="https://dianepw.clientsecure.me" class="nav-item portal-button button">Client Portal</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h3>Get Started</h3>
+        <hr>
+        <p>If you are interested in becoming a new client, please complete this form. I will email you within
+            a day or two to let you know if I believe I am a good fit for your needs and to discuss availability.
+            If appropriate we can schedule a free 15-minute phone consultation. Once accepted as a new
+            client, I will add you to my client portal to complete necessary intake paperwork.</p>
+        <p>If you have other questions about the process, please email me at <a
+                href="mailto:therapy@dianepw.com">therapy@dianepw.com</a>.</p>
+
+        <form class="gform" method="POST"
+            action="https://script.google.com/macros/s/AKfycbwGoyGjgze0ezZ6FlpSrQZteYK8woPJ-l4PQNYqgKXL4aTco8KljseDYtujqoEJ5E4CSA/exec">
+            <fieldset>
+                <p>
+                    <label class="req" for="name">Contact Name</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                </p>
+                <p>
+                    <label class="req" for="email">Contact Email</label><br>
+                    <input type="text" id="email" name="email" required><br>
+                </p>
+                <p>
+                    <label class="req" for="relationship">Relationship to Client</label><br>
+                    <input type="radio" id="self" name="relationship" value="Self" required>
+                    <label for="self">Self</label><br>
+                    <input type="radio" id="clinician" name="relationship" value="Clinician" required>
+                    <label for="clinician">Clinician</label><br>
+                    <input type="radio" id="attorney" name="relationship" value="Attorney" required>
+                    <label for="attorney">Attorney</label><br>
+                    <input type="radio" id="other" name="relationship" value="Other" required>
+                    <label for="other">Other</label><br>
+                </p>
+                <p>
+                    <label class="req" for="concerns">Current Concerns (briefly note why you are seeking
+                        services)</label><br>
+                    <textarea rows="4" name="concerns" placeholder="Enter text" required></textarea><br>
+                </p>
+                <p>
+                    <label for="needs">Scheduling needs (please note day/time requests)</label><br>
+                    <textarea rows="4" name="needs" placeholder="Enter text"></textarea><br>
+                </p>
+                <input type="submit" value="Submit">
+            </fieldset>
+
+            <div style="display:none" class="thankyou_message">
+                <h3>Contact form successfully submitted.</h3>
+            </div>
+        </form>
+
+    </div>
+    <nav class="navbar bottom">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li>919-964-1445</li>
+                <li><a href="mailto:therapy@dianepw.com">therapy@dianepw.com</a></li>
+                <li>1415 West NC Highway 54, Suite 201, Durham, NC, 27707</li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+</body>
+
+</html>
