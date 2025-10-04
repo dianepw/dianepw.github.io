@@ -134,15 +134,15 @@ body {
 
 
 img.center {
-    max-width: 100%;
-    margin: 0 auto;
-    /* padding: 16px 0px; */
+    max-width: 80%;
+    margin: 0 auto; /* This centers the image */
     padding-bottom: 16px;
     display: block;
 }
 
 img.inset {
     border: none;
+    max-width: 100%; /* Allow shrinking */
 }
 
 img.right {
@@ -371,6 +371,7 @@ relative
 }
 
 .hero-section {
+    max-width: 100%;
     position: relative;
     height: auto;
     display: flex;
@@ -391,6 +392,20 @@ relative
     font-size: 4em;
     margin: 0;
     line-height: 1.1;
+}
+
+/* Only indent on larger screens where image floats left */
+@media (min-width: 600px) {
+    .indented-text {
+        margin-left: 40%;
+    }
+}
+
+/* On smaller screens, no indentation */
+@media (max-width: 599px) {
+    .indented-text {
+        margin-left: 0;
+    }
 }
 
 /* Mobile responsive */
@@ -419,12 +434,15 @@ relative
 
     .logo {
         position: relative;
-        width: fit-content;
+        width: 80px;  /* Set explicit width for mobile */
+        height: 80px; /* Set explicit height for mobile */
         align-self: center;
-        /* text-align: center; */
         display: block;
         margin-left: auto;
         margin-right: auto;
+        background-color: white;
+        border-radius: 4px;
+        padding-bottom: 4px; /* Reduce padding for smaller size */
     }
 
     .portal-button {
