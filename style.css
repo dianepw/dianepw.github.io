@@ -191,7 +191,7 @@ textarea {
     resize: none;
     width: 75%;
 }
-relative
+
 .req:after {
     content: " *";
     color: var(--accent);
