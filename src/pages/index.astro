@@ -9,37 +9,48 @@ const { Content } = await render(bioEntry);
 
 <Layout title="Home">
   {/* HERO SECTION */}
-  <div slot="before-content" class="relative flex min-h-[300px] w-full flex-col justify-center overflow-hidden md:min-h-[400px]">
-    
+  <div
+    slot="before-content"
+    class="relative flex min-h-[300px] w-full flex-col justify-center overflow-hidden md:min-h-[400px]"
+  >
     <div class="absolute inset-0 z-0">
       <Image
-        src="/images/branch.jpg" 
+        src="/images/branch.jpg"
         alt="Branch with pink leaves"
         width={1920}
         height={1080}
         class="h-full w-full object-cover object-center"
         loading="eager"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-transparent to-blue-dark/60"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-transparent to-blue-dark/60"
+      >
+      </div>
     </div>
 
-{/* HERO TEXT */}
+    {/* HERO TEXT */}
     {/* Changed to flex justify-center to center the block on all screens */}
-    <div class="relative z-10 mx-auto w-full max-w-6xl px-6 flex justify-center">
-      
+    <div
+      class="relative z-10 mx-auto w-full max-w-6xl px-6 flex justify-center"
+    >
       {/* Removed the md:mr-32 class so it stays perfectly centered */}
       <div>
-        <h1 class="text-shadow-hero font-serif text-5xl font-normal leading-tight tracking-wide text-white md:text-6xl lg:text-7xl">
+        <h1
+          class="text-shadow-hero font-serif text-5xl font-normal leading-tight tracking-wide text-white md:text-6xl lg:text-7xl"
+        >
           lasting
         </h1>
-        <h1 class="text-shadow-hero font-serif text-5xl font-normal italic leading-tight tracking-wide text-white pl-6 md:pl-16 md:text-6xl lg:text-7xl">
+        <h1
+          class="text-shadow-hero font-serif text-5xl font-normal italic leading-tight tracking-wide text-white pl-6 md:pl-16 md:text-6xl lg:text-7xl"
+        >
           positive
         </h1>
-        <h1 class="text-shadow-hero font-serif text-5xl font-normal leading-tight tracking-wide text-white pl-12 md:pl-32 md:text-6xl lg:text-7xl">
+        <h1
+          class="text-shadow-hero font-serif text-5xl font-normal leading-tight tracking-wide text-white pl-12 md:pl-32 md:text-6xl lg:text-7xl"
+        >
           CHANGE...
         </h1>
       </div>
-      
     </div>
   </div>
 
@@ -50,14 +61,14 @@ const { Content } = await render(bioEntry);
     </header>
 
     <div class="clearfix">
-      <Image 
-        src={bioEntry.data.profileImage} 
+      <Image
+        src={bioEntry.data.profileImage}
         alt={bioEntry.data.title}
         width={600}
         height={600}
         class="mb-6 mx-auto block w-full max-w-[280px] rounded-2xl object-cover shadow-md md:float-left md:mx-0 md:mb-8 md:mr-10 md:w-72 md:max-w-none"
       />
-      
+
       <Content />
     </div>
   </article>

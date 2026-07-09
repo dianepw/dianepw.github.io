@@ -4,11 +4,12 @@ import { NAV_LINKS, CLIENT_PORTAL_URL } from "../consts";
 ---
 
 <nav class="relative z-50 bg-white shadow-header md:h-20">
-  <div class="relative mx-auto flex h-full max-w-6xl flex-col items-center justify-between px-4 py-5 md:flex-row md:py-0">
-    
-    <a 
-      href="/" 
-      class="z-10 mb-5 rounded-lg bg-white shadow-sm md:absolute md:top-0 md:left-4 md:mb-0 md:rounded-t-none md:rounded-b-xl md:p-3 md:shadow-md"
+  <div
+    class="relative mx-auto flex h-full max-w-6xl flex-col items-center justify-between px-4 py-5 md:flex-row md:py-0"
+  >
+    <a
+      href="/"
+      class="z-10 mb-5 rounded-lg bg-white shadow-sm md:absolute md:top-0 md:left-4 md:mb-0 md:rounded-t-none md:rounded-b-xl md:p-3 md:shadow-md transition-transform duration-100 active:translate-y-1"
     >
       {/* FIXED: Removed the quotes around the width/height numbers */}
       <Image
@@ -21,24 +22,34 @@ import { NAV_LINKS, CLIENT_PORTAL_URL } from "../consts";
       />
     </a>
 
-    {/* NAVIGATION LINKS - Used gap-x-6 and gap-y-3 to create a neat cluster when wrapping */}
-    <ul class="mb-6 flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-3 px-2 md:mb-0 md:w-auto md:flex-1 md:gap-6 md:pl-36">
-      {NAV_LINKS.map((link) => (
-        <li>
-          <a
-            href={link.href}
-            class="font-serif text-sm font-medium tracking-widest text-blue-dark uppercase transition-colors hover:text-purple-bright"
-          >
-            {link.label}
-          </a>
-        </li>
-      ))}
+    {
+      /* NAVIGATION LINKS - Used gap-x-6 and gap-y-3 to create a neat cluster when wrapping */
+    }
+    <ul
+      class="mb-6 flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-3 px-2 md:mb-0 md:w-auto md:flex-1 md:gap-6 md:pl-36"
+    >
+      {
+        NAV_LINKS.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="font-serif text-sm font-medium tracking-widest text-blue-dark uppercase transition-colors hover:text-purple-bright"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
 
-    {/* CLIENT PORTAL BUTTON - Made wider on mobile (w-full max-w-[250px]) for a premium app feel */}
-    <a href={CLIENT_PORTAL_URL} class="btn-primary w-full max-w-[250px] md:w-auto md:shrink-0">
+    {
+      /* CLIENT PORTAL BUTTON - Made wider on mobile (w-full max-w-[250px]) for a premium app feel */
+    }
+    <a
+      href={CLIENT_PORTAL_URL}
+      class="btn-primary w-full max-w-[250px] md:w-auto md:shrink-0"
+    >
       Client Portal
     </a>
-
   </div>
 </nav>
