@@ -10,7 +10,6 @@ But, what if there was a way to understand your child's behaviors and work _with
 
 NeuroPositive Parenting™ is a coaching approach that uses concepts from developmental psychology, somatic therapy, and neuroscience to provide parents with knowledge, tools, and strategies for more effective and joyful parenting.
 
-{/* Added explicit width and height to fix the CLS warning */}
 <img src="/images/npp2.png" alt="NeuroPositive framework diagram" class="mx-auto my-8 block max-w-[80%] rounded-md" width="800" height="600" loading="eager">
 
 This approach supports caregivers in understanding the "why" behind their child's behaviors—from toddler tantrums to teen withdrawal. Together, we uncover the patterns, needs, and developmental stages driving your child's actions, so you can respond with insight instead of overwhelm.
