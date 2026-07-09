@@ -4,7 +4,7 @@ title: CommonGround Family Resolution™
 
 <div class="flex flex-col items-center text-center">
 
-<img src="/images/CommonGroundRes_Final.png" alt="CommonGround" class="w-1/3 max-w-sm rounded-md mb-6" width="400" height="400" loading="eager">
+<img src="/images/CommonGroundRes_Transparent.png" alt="CommonGround" class="w-1/2 max-w-sm rounded-md mb-6" width="400" height="400" loading="eager">
 
 </div>
 
