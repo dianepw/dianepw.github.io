@@ -1,0 +1,50 @@
+---
+import TopNav from "../components/TopNav.astro";
+import BottomNav from "../components/BottomNav.astro";
+import { ClientRouter } from "astro:transitions";
+import { SITE_TITLE } from "../consts";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+
+const pageTitle = title
+  ? `${title} | ${SITE_TITLE}`
+  : SITE_TITLE;
+---
+
+<!doctype html>
+<html lang="en" class="bg-white">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{pageTitle}</title>
+  <link rel="icon" href="/images/logoicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <ClientRouter />
+</head>
+
+<body class="flex min-h-screen flex-col bg-cream text-blue-dark" transition:animate="none">
+
+  <TopNav />
+
+  <slot name="before-content" />
+
+  <main class="mx-auto w-full max-w-4xl flex-1 px-6 py-16">
+    <slot />
+  </main>
+
+  <div class="mt-auto">
+    <BottomNav />
+  </div>
+
+</body>
+
+</html>

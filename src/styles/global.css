@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ---------------------------------------------------------------- */
+/* Design tokens                                                    */
+/* ---------------------------------------------------------------- */
+
+@theme {
+  /* Colors */
+  --color-cream: #fdfbf7;
+  --color-cream-dark: #f5f0e6;
+  --color-purple-bright: #955e8c;
+  --color-purple-dim: #72668a;
+  --color-blue-dark: #154a6b;
+  --color-blue-dim: #6c87a1;
+  --color-blue-light: #92b6cc;
+  --color-line: #e6dec1;
+  --color-text-primary: #27313a;
+  --color-text-secondary: #56616b;
+  --color-text-muted: #77818a;
+
+  /* Fonts - Bulletproof Google Font fallbacks */
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Type scale */
+  --text-display: 3rem;
+  --text-title: 2.25rem;
+  --text-section: 1.5rem;
+  --text-subsection: 1.15rem;
+  --text-body: 1.05rem;
+  --text-small: 0.9rem;
+  --text-caption: 0.75rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* Base Styles                                                      */
+/* ---------------------------------------------------------------- */
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background: var(--color-cream);
+    color: var(--color-text-primary);
+  }
+
+  body {
+    @apply antialiased;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    color: var(--color-blue-dark);
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--color-blue-dark);
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Typography & Prose                                               */
+/* ---------------------------------------------------------------- */
+
+@layer components {
+  .page-header {
+    /* Tightened margin and matched the h2 border thickness and color */
+    @apply mb-8 border-b-2 border-purple-dim/30 pb-3;
+  }
+
+  .page-title {
+    @apply text-4xl font-normal tracking-wide text-blue-dark;
+  }
+
+  .section-title {
+    @apply text-3xl font-normal tracking-wide text-blue-dark;
+  }
+
+  .prose-site {
+    @apply mx-auto max-w-prose text-base leading-relaxed text-text-primary;
+  }
+
+  .prose-site h2 {
+    @apply mb-6 mt-8 inline-block pb-2 pr-12 text-3xl text-blue-dark;
+  }
+  
+  .prose-site h3 {
+    @apply mb-3 mt-8 text-xl font-medium text-blue-dark;
+  }
+
+  .prose-site ul {
+    @apply mb-6 ml-6 list-disc space-y-2;
+  }
+
+  .prose-site a {
+    @apply text-purple-bright underline decoration-purple-dim/30 underline-offset-4 transition-colors hover:text-blue-dark;
+  }
+
+  .prose-site strong {
+    @apply font-semibold text-text-primary;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* UI Components (Buttons, Forms, FAQs)                             */
+/* ---------------------------------------------------------------- */
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex cursor-pointer items-center justify-center rounded-full border-1 border-blue-dark bg-transparent px-8 py-2.5 font-serif text-sm font-medium tracking-widest text-blue-dark uppercase transition-colors hover:bg-blue-dark hover:text-white;
+  }
+
+  /* Form Elements */
+  .form-label {
+    @apply font-serif text-lg text-blue-dark;
+  }
+  
+  .form-label.required::after {
+    @apply ml-1 text-purple-bright content-['*'];
+  }
+  
+  .form-input {
+    @apply w-full rounded-lg border border-line bg-cream/50 px-4 py-3 text-blue-dark outline-none transition-colors focus:border-purple-bright focus:bg-white focus:ring-1 focus:ring-purple-bright;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Custom Utilities (Shadows, etc.)                                 */
+/* ---------------------------------------------------------------- */
+
+@layer utilities {
+  .shadow-header {
+    @apply shadow-[0_8px_30px_rgba(0,0,0,0.08)];
+  }
+  
+  .shadow-footer {
+    @apply shadow-[0_-8px_30px_rgba(0,0,0,0.08)];
+  }
+  
+.text-shadow-hero {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+}

@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: dianepw/dianepw.github.io
+  branch: astro-redesign
+
+# How images are handled
+media_folder: "public/images"
+public_folder: "/images"
+
+# The Content Collections
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Profile Image",
+          name: "profileImage",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Page Image",
+          name: "pageImage",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "services"
+    label: "Services"
+    folder: "src/content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", value_type: "int" }
+      - label: "Bullets"
+        name: "bullets"
+        widget: "list"
+        required: false
+        field: { label: "Bullet", name: "bullet", widget: "string" }
