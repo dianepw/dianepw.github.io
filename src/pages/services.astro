@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const services = (await getCollection("services")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Layout title="Services">
+  <article class="prose-site">
+    <header class="page-header">
+      <h1 class="page-title">
+        Services
+      </h1>
+    </header>
+  </article>
+
+  <div class="mx-auto mt-12 space-y-16 md:space-y-20">
+    {services.map((service, index) => (
+      <article
+        class={`grid items-center gap-10 md:grid-cols-2 md:gap-16 ${
+          index % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
+        }`}
+      >
+        <div class="flex flex-col justify-center">
+          <h2 class="mb-4 font-serif text-3xl text-blue-dark">
+            {service.data.title}
+          </h2>
+
+          <p class="mb-6 text-text-primary">
+            {service.data.tagline}
+          </p>
+
+          {service.data.bullets && (
+            <ul class="mb-8 list-disc space-y-2 pl-5 text-text-primary">
+              {service.data.bullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+          )}
+
+          <a
+            href={service.data.link}
+            class="group inline-flex w-fit items-center gap-2 font-serif text-sm font-medium tracking-widest text-blue-dark uppercase transition-colors hover:text-purple-bright"
+          >
+            Learn more
+            <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">
+              →
+            </span>
+          </a>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl shadow-sm">
+          <Image 
+            src={service.data.image}
+            alt={service.data.title} 
+            width={800}
+            height={600}
+            loading="eager"
+            class="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105" 
+          />
+        </div>
+      </article>
+    ))}
+  </div>
+</Layout>

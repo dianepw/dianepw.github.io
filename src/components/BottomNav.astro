@@ -1,0 +1,25 @@
+---
+import { CONTACT } from "../consts";
+---
+
+<footer class="mt-20 bg-white py-10 shadow-footer">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-center gap-6 px-4 text-center md:flex-row md:gap-16">
+    
+    {/* ADDED font-medium to all three elements */}
+    <span class="font-serif text-sm font-medium tracking-widest text-blue-dark">
+      {CONTACT.phone}
+    </span>
+    
+    <a 
+      href={`mailto:${CONTACT.email}`} 
+      class="font-serif text-sm font-medium tracking-widest text-blue-dark transition-colors hover:text-purple-bright"
+    >
+      {CONTACT.email}
+    </a>
+    
+    <span class="font-serif text-sm font-medium tracking-widest text-blue-dark">
+      {CONTACT.address}
+    </span>
+    
+  </div>
+</footer>
