@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: dianepw/dianepw.github.io
-  branch: astro-redesign
+  branch: main
 
 # How images are handled
 media_folder: "public/images"

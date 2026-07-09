@@ -2,7 +2,13 @@
 title: CommonGround Family Resolution™
 ---
 
-<img src="/images/CommonGroundRes_Final.png" alt="CommonGround Family Resolution logo" class="float-left mr-6 mb-6 w-1/4 min-w-32 rounded-md" width="400" height="400">
+<div class="flex flex-col items-center text-center">
+
+<img src="/images/CommonGroundRes_Final.png" alt="CommonGround" class="w-1/3 max-w-sm rounded-md mb-6" width="400" height="400" loading="eager">
+
+</div>
+
+CommonGround Family Resolution offers a range of specialized services designed to help families navigate conflict with clarity, structure, and compassion. Whether though Co-Parenting Coaching, Intensive Family (Reunification) Therapy, Parenting Coordination, or Guardian ad Litem services, each approach is tailored to a family's unique needs while sharing a common purpose: helping families improve understanding, reduce conflict, and create a stronger foundation for healthy relationships and future growth.
 
 ## Co‑Parenting Coaching
 
